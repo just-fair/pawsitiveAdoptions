@@ -11,7 +11,7 @@ const Request = ({request, deploy}) => {
     }
 
     const handleDeleteBtn=async()=>{
-        const response= await fetch('http://localhost:4000/pawsitiveadoptions/form/'+request._id, {
+        const response= await fetch('https://pawsitive-adoptions.vercel.app/pawsitiveadoptions/form/'+request._id, {
             method: 'DELETE'
         })
 

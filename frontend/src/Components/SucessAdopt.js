@@ -16,7 +16,7 @@ const SucessAdopt = ({requestDetails, dog}) => {
     const [editMode, setEditMode]= useState(false);
 
     const handleCancelBtn=async()=>{
-        const response=await fetch('http://localhost:4000/pawsitiveadoptions/form/'+requestDetails._id, {
+        const response=await fetch('https://pawsitive-adoptions.vercel.app/pawsitiveadoptions/form/'+requestDetails._id, {
             method: 'DELETE',
         });
 
@@ -46,7 +46,7 @@ const SucessAdopt = ({requestDetails, dog}) => {
 
         const edittedRequestForm={lastName, firstName, reason, age, address, contact, emailAddress};
 
-        const response= await fetch('http://localhost:4000/pawsitiveadoptions/form/'+requestDetails._id, {
+        const response= await fetch('https://pawsitive-adoptions.vercel.app/pawsitiveadoptions/form/'+requestDetails._id, {
             method:'PATCH',
             body: JSON.stringify(edittedRequestForm),
             headers:{

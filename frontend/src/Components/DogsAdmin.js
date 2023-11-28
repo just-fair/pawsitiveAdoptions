@@ -33,7 +33,7 @@ const DogsAdmin = ({dog, dispatch}) => {
     const handleSubmitButton=async(e)=>{
         e.preventDefault()
 
-        const response=await fetch('http://localhost:4000/pawsitiveadoptions/dogs/'+dog._id, {
+        const response=await fetch('https://pawsitive-adoptions.vercel.app/pawsitiveadoptions/dogs/'+dog._id, {
             method:'PATCH',
             body: JSON.stringify(updatedDogsInfo),
             headers:{
@@ -68,7 +68,7 @@ const DogsAdmin = ({dog, dispatch}) => {
     }
 
     const handleDeleteDogBtn=async()=>{
-        const response= await fetch('http://localhost:4000/pawsitiveadoptions/dogs/'+dog._id, {
+        const response= await fetch('https://pawsitive-adoptions.vercel.app/pawsitiveadoptions/dogs/'+dog._id, {
             method: 'DELETE'
         })
 
@@ -80,7 +80,7 @@ const DogsAdmin = ({dog, dispatch}) => {
     }
 
     const handleShowAllReqBtn=async()=>{
-        const response = await fetch('http://localhost:4000/pawsitiveadoptions/forms/'+dog.name)
+        const response = await fetch('https://pawsitive-adoptions.vercel.app/pawsitiveadoptions/forms/'+dog.name)
 
         const json= await response.json();
 

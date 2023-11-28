@@ -27,7 +27,7 @@ const Form = ({dog, setShowForm}) => {
         //dagdagan mo to pagtapos kana sa iba
         const updatedDog = { ...dog, reqNum: dog.reqNum + 1 };
 
-        const response= await fetch('http://localhost:4000/pawsitiveadoptions/form/'+dog._id, {
+        const response= await fetch('https://pawsitive-adoptions.vercel.app/form/'+dog._id, {
             method:'POST',
             body: JSON.stringify(requestForm),
             headers:{
@@ -52,7 +52,7 @@ const Form = ({dog, setShowForm}) => {
 
             const updateDog={...dog, numOfReq:dog.numOfReq+1}
 
-            const updatedResponse= await fetch('http://localhost:4000/pawsitiveadoptions/dogs/'+dog._id, {
+            const updatedResponse= await fetch('https://pawsitive-adoptions.vercel.app/pawsitiveadoptions/dogs/'+dog._id, {
             method:'PATCH' ,          
             body: JSON.stringify(updateDog),
             // headers:{
