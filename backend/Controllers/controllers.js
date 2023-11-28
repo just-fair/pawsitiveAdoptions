@@ -20,12 +20,7 @@ const showDogs=async(req, res)=>{
 }
 
 const upload= multer({
-    storage:multer.diskStorage({
-        destination:'images',
-        filename:(req, file, cb)=>{
-            cb(null, Date.now()+file.originalname)
-        }
-    })
+    storage:multer.memoryStorage()
 })
 
 const addDog=async(req, res)=>{
