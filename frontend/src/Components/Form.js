@@ -38,10 +38,10 @@ const Form = ({dog, setShowForm}) => {
         const json= await response.json();
         setRequestDetails(json);
 
-        if(!response){
+        if(!response.ok){
             setError(json.message);
         }else{
-            setSuccessful(!succesful);
+            setSuccessful(true);
             setFirstName("");
             setLastName("");
             setReason("");
