@@ -42,7 +42,7 @@ const Form = ({dog, setShowForm}) => {
         if(!response.ok){
             setError(json.message);
         }else{
-            setSuccessful(true);
+            
             setFirstName("");
             setLastName("");
             setReason("");
@@ -65,11 +65,12 @@ const Form = ({dog, setShowForm}) => {
 
                 const jsonResponse= await updatedResponse.json()
                 dispatch({type: 'update_dog', payload: updatedDog})
+                
 
             }
         }
 
-
+        setSuccessful(true);
         console.log(succesful);
     
     }
