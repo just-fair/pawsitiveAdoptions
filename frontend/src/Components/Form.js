@@ -52,11 +52,10 @@ const Form = ({dog, setShowForm}) => {
             setEmailAdress("");
             setError(null);
 
-            const updateDog={...dog, numOfReq:dog.numOfReq+1}
 
             const updatedResponse= await fetch('https://pawsitive-adoptions.vercel.app/pawsitiveadoptions/dogs/'+dog._id, {
             method:'PATCH' ,          
-            body: JSON.stringify(updateDog),
+            body: JSON.stringify(updatedDog),
              headers:{
                  'Content-type':'application/json'
              } 
