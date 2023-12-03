@@ -22,7 +22,7 @@ const DogsAdmin = ({dog, dispatch}) => {
     const {request, deploy}=useContext(RequestContext);
     const [showReq, setShowReq]=useState(false);
 
-    let updatedDogsInfo={name, breed, color, age, personality, height, weight};
+    
 
     const uint8Array = new Uint8Array(dog.image.data.data);
     const blob = new Blob([uint8Array], { type: 'image/jpg' });
@@ -32,6 +32,8 @@ const DogsAdmin = ({dog, dispatch}) => {
 
     const handleSubmitButton=async(e)=>{
         e.preventDefault()
+
+        let updatedDogsInfo={name, breed, color, age, personality, height, weight};
 
         const response=await fetch('https://pawsitive-adoptions.vercel.app/pawsitiveadoptions/dogs/'+dog._id, {
             method:'PATCH',
