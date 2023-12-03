@@ -65,6 +65,7 @@ const Form = ({dog, setShowForm}) => {
 
                 const jsonResponse= await updatedResponse.json()
                 dispatch({type: 'update_dog', payload: jsonResponse})
+
             }
         }
 
