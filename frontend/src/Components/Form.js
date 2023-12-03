@@ -26,7 +26,7 @@ const Form = ({dog, setShowForm}) => {
         const requestForm={lastName, firstName, reason, age, address, contact, emailAddress};
         //dagdagan mo to pagtapos kana sa iba
         
-        const updatedDog = { ...dog, reqNum: dog.reqNum + 1 };
+        const updatedDog = { ...dog, numOfReq: dog.numOfReq + 1 };
 
         const response= await fetch('https://pawsitive-adoptions.vercel.app/pawsitiveadoptions/form/'+dog._id, {
             method:'POST',
