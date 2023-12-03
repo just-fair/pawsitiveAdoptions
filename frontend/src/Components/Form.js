@@ -25,8 +25,8 @@ const Form = ({dog, setShowForm}) => {
         
         const requestForm={lastName, firstName, reason, age, address, contact, emailAddress};
         //dagdagan mo to pagtapos kana sa iba
-        const {image, ...tempObj}=dog;
-        const updatedDog = { ...tempObj, reqNum: dog.reqNum + 1 };
+        
+        const updatedDog = { ...dog, reqNum: dog.reqNum + 1 };
 
         const response= await fetch('https://pawsitive-adoptions.vercel.app/pawsitiveadoptions/form/'+dog._id, {
             method:'POST',
@@ -52,9 +52,7 @@ const Form = ({dog, setShowForm}) => {
             setEmailAdress("");
             setError(null);
            
-        }
-
-        const updatedResponse= await fetch('https://pawsitive-adoptions.vercel.app/pawsitiveadoptions/dogs/'+dog._id, {
+            const updatedResponse= await fetch('https://pawsitive-adoptions.vercel.app/pawsitiveadoptions/dogs/'+dog._id, {
 
             method:'PATCH' ,          
             body: JSON.stringify(updatedDog),
@@ -64,8 +62,12 @@ const Form = ({dog, setShowForm}) => {
             });  
 
             if(updatedResponse.ok){
-                dispatch({type: 'update_dog', payload: updateDog})
+
+                const jsonResponse= await updatedResponse.json()
+                dispatch({type: 'update_dog', payload: jsonResponse})
             }
+        }
+
 
         console.log(succesful);
     
