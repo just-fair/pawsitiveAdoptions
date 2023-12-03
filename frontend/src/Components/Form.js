@@ -64,7 +64,7 @@ const Form = ({dog, setShowForm}) => {
             });  
 
             if(updatedResponse.ok){
-                dispatch({type: 'update_dog', payload: updateDog})
+                dispatch({type: 'update_dog', payload: updatedDog})
             }
 
         console.log(succesful);
