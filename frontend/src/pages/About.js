@@ -15,7 +15,6 @@ const About = () => {
                 <p>
                 Developers:
                 <br/>       
-                <br/>
                 Manicane, Kim Brian<br/>
                 Serquiña, Jaspher<br/>
                 Astorga, Jay Elyzar
