@@ -51,12 +51,13 @@ const Form = ({dog, setShowForm}) => {
             setContact("");
             setEmailAdress("");
             setError(null);
+           
+        }
 
-            const updateDog={...dog, numOfReq:dog.numOfReq+1}
-
-            const updatedResponse= await fetch('https://pawsitive-adoptions.vercel.app/pawsitiveadoptions/dogs/'+dog._id, {
+        
+        const updatedResponse= await fetch('https://pawsitive-adoptions.vercel.app/pawsitiveadoptions/dogs/'+dog._id, {
             method:'PATCH' ,          
-            body: JSON.stringify(updateDog),
+            body: JSON.stringify(updatedDog),
              headers:{
                  'Content-type':'application/json'
              } 
@@ -65,10 +66,7 @@ const Form = ({dog, setShowForm}) => {
             if(updatedResponse.ok){
                 dispatch({type: 'update_dog', payload: updateDog})
             }
-           
-        }
 
-        
         console.log(succesful);
 
     
