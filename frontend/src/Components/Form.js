@@ -54,8 +54,13 @@ const Form = ({dog, setShowForm}) => {
            
         }
 
+<<<<<<< HEAD
         
         const updatedResponse= await fetch('https://pawsitive-adoptions.vercel.app/pawsitiveadoptions/dogs/'+dog._id, {
+=======
+
+            const updatedResponse= await fetch('https://pawsitive-adoptions.vercel.app/pawsitiveadoptions/dogs/'+dog._id, {
+>>>>>>> f868d8515835e45c65548d77666f3e2ba3430b82
             method:'PATCH' ,          
             body: JSON.stringify(updatedDog),
              headers:{
