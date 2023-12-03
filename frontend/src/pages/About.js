@@ -17,7 +17,8 @@ const About = () => {
                 <br/>       
                 <br/>
                 Manicane, Kim Brian<br/>
-                Serquiña, Jaspher
+                Serquiña, Jaspher<br/>
+                Astorga, Jay Elyzar
                 </p>
             </div>
         </div>
