@@ -22,7 +22,7 @@ const SucessAdopt = ({requestDetails, dog}) => {
 
         const json= await response.json();
 
-        if(response.ok) setCancel(true);
+        if(response.ok) setCancel(!cancel);
         
 
     }
@@ -37,7 +37,7 @@ const SucessAdopt = ({requestDetails, dog}) => {
         setContact(requestDetails.contact);
         setEmailAddress(requestDetails.emailAddress);
 
-        setEditMode(true);
+        setEditMode(!editMode);
        
     }
 
@@ -58,11 +58,11 @@ const SucessAdopt = ({requestDetails, dog}) => {
 
         const json=await response.json();
 
-        setEdit(true);
+        setEdit(!edit);
     }
 
     const handleOkBtn=()=>{
-        setOk(true);
+        setOk(!ok);
     }
 
     return ( 

@@ -12,7 +12,7 @@ const Adopt = () => {
 
     useEffect(()=>{
         const fetchDogs= async()=>{
-            if(dogs.length===0) setLoading(true);
+            if(dogs.length===0) setLoading(!loading);
             const response= await fetch('https://pawsitive-adoptions.vercel.app/pawsitiveadoptions/dogs/');
             const json= await response.json();
 

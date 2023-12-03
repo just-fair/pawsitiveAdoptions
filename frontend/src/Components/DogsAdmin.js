@@ -45,7 +45,7 @@ const DogsAdmin = ({dog, dispatch}) => {
 
         if(response.ok) dispatch({type: 'update_dog', payload: dog})
 
-        setEditted(true);
+        setEditted(!editted);
     }
 
 
@@ -74,7 +74,7 @@ const DogsAdmin = ({dog, dispatch}) => {
 
         if(response.ok) dispatch({type:'delete_dog', payload:dog})
 
-        setDeleted(true);
+        setDeleted(!deleted);
 
         
     }
@@ -87,7 +87,7 @@ const DogsAdmin = ({dog, dispatch}) => {
         if(response.ok){
             if(json.length === 0) alert("No Request");
             deploy({type:'set_request', payload:json})
-            setShowReq(true);
+            setShowReq(!showReq);
             
         }else{
            console.log(json.message);

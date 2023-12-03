@@ -7,7 +7,7 @@ const Request = ({request, deploy}) => {
     const [deleted, setDeleted]= useState(false)
 
     const handleClick=()=>{
-        setShowEachInfo(true);
+        setShowEachInfo(!showEachInfo);
     }
 
     const handleDeleteBtn=async()=>{
@@ -19,7 +19,7 @@ const Request = ({request, deploy}) => {
 
         if(response.ok){
             deploy({type:'delete_request', payload: json})
-            setDeleted(true);
+            setDeleted(!deleted);
         }
     }
 
