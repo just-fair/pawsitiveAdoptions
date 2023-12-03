@@ -43,7 +43,7 @@ const DogsAdmin = ({dog, dispatch}) => {
 
         const json= await response.json();
 
-        if(response.ok) dispatch({type: 'update_dog', payload: dog})
+        if(response.ok) dispatch({type: 'update_dog', payload: updatedDogsInfo})
 
         setEditted(!editted);
     }
