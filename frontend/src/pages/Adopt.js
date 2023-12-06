@@ -30,7 +30,7 @@ const Adopt = () => {
 
 
     const [presentIndex, setPresentIndex] = useState(0);
-    const dogsPerPage = 5;
+    const dogsPerPage = 6;
     
     console.log(dogs.length);
 
@@ -47,17 +47,22 @@ const Adopt = () => {
 
     return ( 
         <div className="adopt">
-                {loading && <h2>Loading...</h2>}
-                <Link to="/admin">Admin</Link>
-                {dogs && dogs.slice(presentIndex, presentIndex+dogsPerPage).map((dog)=>(
-                    <div className="dogsPic" key={dog._id}>
-                        <Dogs dog={dog}/>
-                    </div>
-                ))}
+                <Link to="/admin" id='admin'>Admin</Link>
 
-                <button onClick={handlePrevBtn} disabled={presentIndex + dogsPerPage ==5} >Prev</button>
-                <button onClick={handleNextBtn} disabled={presentIndex + dogsPerPage >= dogs.length} >Next</button>
-            
+                <div className="dogs-grid">
+                    {loading && <h2>Loading...</h2>}
+                    
+                    {dogs && dogs.slice(presentIndex, presentIndex+dogsPerPage).map((dog)=>(
+                        <div className="dogsPic" key={dog._id}>
+                            <Dogs dog={dog}/>
+                        </div>
+                    ))}
+                </div>
+
+                <div className="pagination-buttons">
+                    <button onClick={handlePrevBtn} disabled={presentIndex + dogsPerPage ==6} >Prev</button>
+                    <button onClick={handleNextBtn} disabled={presentIndex + dogsPerPage >= dogs.length} >Next</button>
+                </div>
   
         </div>
      );

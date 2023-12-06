@@ -64,6 +64,15 @@ header .navbar a{
   line-height: 130%; 
 }
 
+/* .pages{
+  height: 100vh;
+  width: 100vw;
+  background-image: url('../public/bgDogsBlur.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
 
 
 /* styles for home page */
@@ -354,7 +363,7 @@ margin-left: 100px;  */
 
 /* css for adopt page */
 
-.adopt{
+/* .adopt{
   width: 100vw;
   height: 100vh;
   background-image: url('../public/bgDogsBlur.png');
@@ -377,11 +386,405 @@ margin-left: 100px;  */
     "donate botmid dog" 1fr
     / 1fr 1fr 1fr;
   gap: 8px;
-}
+} */
 
-.pages{
+
+.adopt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* width: 100vw;
+  height: 100vh; */
   background-image: url('../public/bgDogsBlur.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.adopt a{
+  padding-top: 10px;
+  text-decoration: none;
+  border: 2px solid;
+  border-radius: 10px;
+  padding: 5px;
+  color:#E6B88B;
+  background-color: #734F4B;
+  
+}
+
+
+
+.dogs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.dogsPic {
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.dogsPic:hover {
+  transform: scale(1.1);
+}
+
+button {
+  padding: 10px;
+  margin: 5px;
+  background-color: #E6B88B;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+h2 {
+  margin: 10px;
+}
+
+/* dogs indo */
+
+.dogInfo {
+  max-width: 400px;
+  margin: 20px;
+  padding: 20px;
+  border: 3px solid burlywood;
+  border-radius: 8px;
+  text-align: left;
+}
+
+h3 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+p {
+  margin: 8px 0;
+}
+
+button {
+  padding: 10px;
+  background-color: #E6B88B;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #E6B88B;
+}
+
+/* css for form */
+
+.form {
+  max-width: 400px;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.reqForm {
+  display: flex;
+  flex-direction: column;
+}
+
+h3 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input {
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px;
+  background-color: #E6B88B;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #E6B88B;
+}
+
+/* css for success */
+
+.successAdopt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.editForm {
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.editReqForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.editReqForm h3 {
+  margin-bottom: 15px;
+}
+
+.editReqForm label {
+  margin-top: 10px;
+}
+
+.editReqForm input {
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.editReqForm button {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #E6B88B;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block; 
+}
+
+.editReqForm button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.bts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.optBtns{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.bts ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.bts h3 {
+  margin-top: 15px;
+}
+
+.bts button {
+  margin-top: 15px;
+  /* margin-right: 10px; */
+  padding: 10px;
+  background-color: #E6B88B;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block; 
+}
+
+.bts button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* admin css */
+
+.dogsAdminInfo {
+  background-image: url('../public/bgDogsBlur.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.dogsAdminInfo img {
+  width: 200px; 
+  height: 200px; 
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.dogsAdminInfo h2 {
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.adminDogInfo {
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  margin-top: 20px;
+}
+
+.adminDogInfo h3 {
+  margin-bottom: 15px;
+}
+
+.adminDogInfo p, .adminDogInfo label {
+  margin: 5px 0;
+}
+
+.adminDogInfo button {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.adminDogInfo button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.adminEditDogForm {
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  margin-top: 20px;
+}
+
+.adminEditDogForm h3 {
+  margin-bottom: 15px;
+}
+
+.adminEditDogForm label {
+  margin-top: 10px;
+  display: block; 
+}
+
+.adminEditDogForm input {
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.adminEditDogForm button {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.adminEditDogForm button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.dogsAdminInfo h2 {
+  margin-top: 20px;
+}
+
+.dogsRequest {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* admin reqs info */
+
+.eachRequest {
+  margin: 10px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.eachRequest p {
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+.reqInfo {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.reqInfo p {
+  margin: 5px 0;
+}
+
+.reqInfo button {
+  padding: 8px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.reqInfo button:hover {
+  background-color: #0056b3;
+}
+
+.reqInfo h2 {
+  margin-top: 10px;
+  color: green; 
 }

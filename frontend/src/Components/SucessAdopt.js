@@ -108,9 +108,11 @@ const SucessAdopt = ({requestDetails, dog}) => {
                         <h2>Thank you</h2>
                     </ul>
 
-                    <button onClick={handleCancelBtn}>Cancel</button>
-                    <button onClick={handleEditBtn}>Edit</button>
-                    <button onClick={handleOkBtn}>Ok</button>
+                    <div className="optBtns">
+                        <button onClick={handleCancelBtn}>Cancel</button>
+                        <button onClick={handleEditBtn}>Edit</button>
+                        <button onClick={handleOkBtn}>Ok</button>
+                    </div>
 
                     {cancel && <h3>Your request is canceled</h3>}
                     {edit&&<h3>Your request is editted</h3>}
