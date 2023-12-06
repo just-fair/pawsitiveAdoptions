@@ -31,8 +31,8 @@ const addDog=async(req, res)=>{
         const dog=await Dog.create({
             name:name,
             image:{
-                data: fs.readFileSync("images/"+req.file.filename),
-                contentType:'image/png'
+                data:  req.file.buffer,
+                contentType: req.file.mimetype
             },
             breed:breed,
             color:color,
